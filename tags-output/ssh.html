@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>Phil Rees</title>
+    <title>Phil Rees: Posts Tagged &quot;ssh&quot;</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700' rel='stylesheet'
           type='text/css'>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/default.min.css">
-    <link href="css/screen.css" rel="stylesheet" type="text/css" />
+    <link href="/css/screen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
@@ -27,7 +27,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li  class="active" ><a href="/index.html">Home</a></li>
+                <li ><a href="/index.html">Home</a></li>
                 <li
                 ><a href="/archives.html">Archives</a></li>
                 
@@ -50,43 +50,17 @@
         <div class="col-lg-9">
             <div id="content">
                 
-<div id="post">
-    <div class="post-header">
-    <div id="post-meta" class="row">
-        <div class="col-lg-6">January 21, 2016</div>
-        
+<div id="posts-by-tag">
+    <div id="page-header">
+        <h2>Posts Tagged &quot;ssh&quot;</h2>
     </div>
-    <h2>SSH time saver</h2>
-</div>
-<div>
+    <ul>
     
-    <p>If you use SSH frequently then this might be useful. And if you use ssh infrequently then this might be even more useful. SSH is one of the most common ways to get access to a unix based server. If you are in IT or development you likely have access to several servers that all have their own dedicated functions. On top of that, a lot of servers you use might not be under a DNS and their is no convient domain name to use when logging in; instead there is just an IP.</p><p>If you are comfortable on the linux cli you have likely come across how to make and add aliases to your environment. This is one way to save your credientials. For example adding this:</p><pre><code>alias ll='ls -al'
-alias myserver='ssh root@192.168.0.1'
-</code></pre>to your bashrc file (<code>&#126;/.bashrc</code>) will let you log into this server by just typing <code>myserver</code>.<p>The first alias here shows how you can alias any command. The second here we have alias <code>myserver</code> to now execute the following command and therefore log us in via ssh.</p><p>This works well for a lot of bash commands and even ssh commands. However once you have a lot of ssh options and parameters it can become a bit unwieldy.</p><h3><a name="ssh&#95;config"></a>SSH Config</h3><p>The solution is simple. This file <code>&#126;/.ssh/config</code> can store all our connections and settings. Here is how:</p><pre><code>Host prod
-  HostName myserver
-  Port 22
-  User root
-</code></pre><p>Now we can reference the name of our host to login: <code>ssh prod</code> and we should be logged in.</p><h3><a name="even&#95;more"></a>Even more</h3>There is a lot more you can do with a ssh config file. This is just the basics. To get more I would suggest you checkout the man pages for ssh_config <code>man ssh&#95;config</code>.
-</div>
-
-<div id="post-tags">
-    <b>Tags: </b>
+        <li>
+            <a href="/posts-output/2016-01-21-ssh.html">SSH time saver</a>
+        </li>
     
-    <a href="/tags-output/linux.html">linux</a>
-    
-    <a href="/tags-output/ssh.html">ssh</a>
-    
-</div>
-
-
-    
-
-    <div id="prev-next">
-        
-        
-        <a class="right" href="/posts-output/2016-01-07-first.html">First post &raquo;</a>
-        
-    </div>
+    </ul>
 </div>
 
             </div>
@@ -126,7 +100,7 @@ alias myserver='ssh root@192.168.0.1'
 </div>
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="js/highlight.pack.js" type="text/javascript"></script>
+<script src="/js/highlight.pack.js" type="text/javascript"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

@@ -12,17 +12,43 @@ http://prees1.github.io
 A place for my tinkering and exploration.
 </description>
 <lastBuildDate>
-Sun, 17 Jan 2016 14:48:03 -0500
+Thu, 21 Jan 2016 10:12:21 -0500
 </lastBuildDate>
 <generator>
 clj-rss
 </generator>
 <item>
 <guid>
-http://prees1.github.io/posts-output/2016-01-07-docs.html
+http://prees1.github.io/posts-output/2016-01-21-ssh.html
 </guid>
 <link>
-http://prees1.github.io/posts-output/2016-01-07-docs.html
+http://prees1.github.io/posts-output/2016-01-21-ssh.html
+</link>
+<title>
+SSH time saver
+</title>
+<description>
+&lt;p&gt;If you use SSH frequently then this might be useful. And if you use ssh infrequently then this might be even more useful. SSH is one of the most common ways to get access to a unix based server. If you are in IT or development you likely have access to several servers that all have their own dedicated functions. On top of that, a lot of servers you use might not be under a DNS and their is no convient domain name to use when logging in; instead there is just an IP.&lt;/p&gt;&lt;p&gt;If you are comfortable on the linux cli you have likely come across how to make and add aliases to your environment. This is one way to save your credientials. For example adding this:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;alias ll='ls -al'
+alias myserver='ssh root@192.168.0.1'
+&lt;/code&gt;&lt;/pre&gt;to your bashrc file (&lt;code&gt;&amp;#126;/.bashrc&lt;/code&gt;) will let you log into this server by just typing &lt;code&gt;myserver&lt;/code&gt;.&lt;p&gt;The first alias here shows how you can alias any command. The second here we have alias &lt;code&gt;myserver&lt;/code&gt; to now execute the following command and therefore log us in via ssh.&lt;/p&gt;&lt;p&gt;This works well for a lot of bash commands and even ssh commands. However once you have a lot of ssh options and parameters it can become a bit unwieldy.&lt;/p&gt;&lt;h3&gt;&lt;a name=&quot;ssh&amp;#95;config&quot;&gt;&lt;/a&gt;SSH Config&lt;/h3&gt;&lt;p&gt;The solution is simple. This file &lt;code&gt;&amp;#126;/.ssh/config&lt;/code&gt; can store all our connections and settings. Here is how:&lt;/p&gt;&lt;pre&gt;&lt;code&gt;Host prod
+  HostName myserver
+  Port 22
+  User root
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Now we can reference the name of our host to login: &lt;code&gt;ssh prod&lt;/code&gt; and we should be logged in.&lt;/p&gt;&lt;h3&gt;&lt;a name=&quot;even&amp;#95;more&quot;&gt;&lt;/a&gt;Even more&lt;/h3&gt;There is a lot more you can do with a ssh config file. This is just the basics. To get more I would suggest you checkout the man pages for ssh_config &lt;code&gt;man ssh&amp;#95;config&lt;/code&gt;.
+</description>
+<enclosure>
+
+</enclosure>
+<pubDate>
+Thu, 21 Jan 2016 00:00:00 -0500
+</pubDate>
+</item>
+<item>
+<guid>
+http://prees1.github.io/posts-output/2016-01-07-first.html
+</guid>
+<link>
+http://prees1.github.io/posts-output/2016-01-07-first.html
 </link>
 <title>
 First post
